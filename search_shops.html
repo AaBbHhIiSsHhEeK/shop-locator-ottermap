@@ -1,0 +1,16 @@
+<h2>Search for Shops</h2>
+<form method="GET">
+    <label for="latitude">Latitude:</label>
+    <input type="text" id="latitude" name="latitude" required>
+    <label for="longitude">Longitude:</label>
+    <input type="text" id="longitude" name="longitude" required>
+    <button type="submit">Search</button>
+</form>
+{% if shops %}
+<h3>Nearby Shops:</h3>
+<ul>
+    {% for shop, distance in shops %}
+    <li>{{ shop.name }} - {{ distance }} km away</li>
+    {% endfor %}
+</ul>
+{% endif %}
