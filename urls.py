@@ -1,7 +1,8 @@
-from django.contrib import admin
-from django.urls import path, include
+from django.urls import path
+from . import views
 
 urlpatterns = [
-    path('admin/', admin.site.urls),
-    path('shops/', include('shops.urls')),
+    path('register/', views.register_shop, name='register_shop'),
+    path('list/', views.shop_list, name='shop_list'),
+    path('search/', views.search_shops, name='search_shops'),
 ]
