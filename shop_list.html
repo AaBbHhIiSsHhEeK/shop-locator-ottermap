@@ -1,0 +1,6 @@
+<h2>List of Shops</h2>
+<ul>
+    {% for shop in shops %}
+    <li>{{ shop.name }} - ({{ shop.latitude }}, {{ shop.longitude }})</li>
+    {% endfor %}
+</ul>
